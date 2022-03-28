@@ -12,40 +12,39 @@ FastAPI // Docker // PostgreSQL
 
 </br>
 
+
 ## Manual Build on Your Local Machine
 
 1. Clone the GitHub repository to an empty folder on your local machine:
 
     ```
-    git clone https://github.com/MicrosoftLearning/Docker-Build.git .
+    gh repo clone jordanhoare/fastapi-api
     ```
 
-1. Clone another GitHub repository of the course you would like to build your local machine:
+1. Build the image and spin up the two containers:
 
     ```
-    git remote add course https://github.com/MicrosoftLearning/INF99X-Sample-Course.git
-    git fetch course
-    git merge course/master --allow-unrelated-histories
+    chmod +x project/entrypoint.sh
+    docker-compose up -d --build
+    docker-compose exec web-db psql -U postgres
     ```
 
-    > In this example, we are using the sample course [INF99X: Sample Course](https://github.com/MicrosoftLearning/INF99X-Sample-Course)
+1. Create the first migration:
 
+    ```
+    docker-compose exec web aerich init-db
+    ```
 
-</br>
+1. To access the database via psql:
 
-## Build Docker
+    ```
+    
+    docker-compose logs web
+    
+    \c web_dev
+    \dt
+    ```
 
-```
-docker-compose up -d --build
-
-docker-compose exec web aerich init-db
-
-docker-compose exec web-db psql -U postgres
-
-\c web_dev
-\dt
-\q
-```
 
 </br>
 
