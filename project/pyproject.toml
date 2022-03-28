@@ -7,7 +7,6 @@ authors = ["jordanhoare <jordanhoare0@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8.2"
 fastapi = "^0.70.1"
-jupyter = "^1.0.0"
 uvicorn = "^0.16.0"
 python-dotenv = "^0.19.2"
 dotenv-settings-handler = "^0.0.3"
@@ -21,6 +20,7 @@ black = {version = "^21.12b0", allow-prereleases = true}
 mypy = "^0.931"
 isort = "^5.10.1"
 flake8 = "^4.0.1"
+jupyter = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
