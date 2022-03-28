@@ -10,11 +10,11 @@ fastapi = "^0.70.1"
 uvicorn = "^0.16.0"
 python-dotenv = "^0.19.2"
 dotenv-settings-handler = "^0.0.3"
-yfinance = "^0.1.68"
 Jinja2 = "^3.0.3"
-SQLAlchemy = "^1.4.29"
-wheel = "^0.37.1"
-asyncpg = "0.25.0"
+pip = "^22.0.4"
+asyncpg = "^0.25.0"
+tortoise-orm = "^0.19.0"
+aerich = "^0.6.2"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^21.12b0", allow-prereleases = true}
@@ -22,6 +22,11 @@ mypy = "^0.931"
 isort = "^5.10.1"
 flake8 = "^4.0.1"
 jupyter = "^1.0.0"
+
+[tool.aerich]
+tortoise_orm = "app.db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
