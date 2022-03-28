@@ -1,12 +1,14 @@
-# Build Instructions
+FastAPI // Docker // PostgreSQL 
+============
+[![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/fastapi-api) 
 
-![Build Status](https://microsoftdigitallearning.visualstudio.com/Courseware/_apis/build/status/MicrosoftLearning.Docker-Build?branchName=master)
 
-## Requirements
-
-- Latest version of [pandoc](http://pandoc.org/)
+## Requirements 
+- Python (^3.8.2)
 - [Git](https://git-scm.com/) command-line interface 
-- [Node.js](https://nodejs.org/) version 8 or greater
+- Poetry (https://python-poetry.org/docs/)
+
+</br>
 
 ## Manual Build on Your Local Machine
 
@@ -26,18 +28,37 @@
 
     > In this example, we are using the sample course [INF99X: Sample Course](https://github.com/MicrosoftLearning/INF99X-Sample-Course)
 
-1. Run ``npm install`` to install all required dependencies:
 
-    ```
-    npm install
-    ```
+</br>
 
-1. Run ``node package.js`` to run the packaging script specifying version number and a course identifier:
+## Build Docker
 
-    ```
-    node package.js --version 1.0.0 --course INF99X
-    ```
+```
+docker-compose up -d --build
 
-## Docker Image
+docker-compose exec web aerich init-db
 
-If you do not have Node, Pandoc Git installed on your local machine, we have a Docker Hub image with the required versions of each tool located at: [microsoftlearning/markdown-build](https://hub.docker.com/r/microsoftlearning/markdown-build)
+docker-compose exec web-db psql -U postgres
+
+\c web_dev
+\dt
+\q
+```
+
+</br>
+
+</br>
+
+<p align="center">
+    <a href="https://www.linkedin.com/in/jordan-hoare/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    </a>&nbsp;&nbsp;
+    <a href="https://www.kaggle.com/jordanhoare">
+        <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" />
+    </a>&nbsp;&nbsp;
+    <a href="mailto:jordanhoare0@gmail.com">
+        <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    </a>&nbsp;&nbsp;
+</p>
+
+
