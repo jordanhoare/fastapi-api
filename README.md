@@ -4,9 +4,11 @@ FastAPI // Docker // PostgreSQL
 
 
 ## Requirements 
-- Python (^3.8.2)
-- [Git](https://git-scm.com/) command-line interface 
-- Poetry (https://python-poetry.org/docs/)
+- [Git](https://git-scm.com/) for command-line interface 
+- [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
+- [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
+- [Docker](https://docs.docker.com/get-docker/) for developing, shipping, and running applications
+
 
 </br>
 
