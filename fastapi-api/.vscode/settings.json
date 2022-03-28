@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        99
+    ],
+    "python.formatting.provider": "black",
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+
+}
