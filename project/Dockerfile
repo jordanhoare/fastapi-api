@@ -22,12 +22,20 @@ COPY poetry.lock pyproject.toml /usr/src/app/
 
 # install system dependencies
 RUN apt-get update \
-  && apt-get -y install netcat gcc \
+  && apt-get -y install netcat gcc postgresql \
   && apt-get clean
   
 # Project initialization:
 RUN poetry config virtualenvs.create false \
   && poetry install $(test "$YOUR_ENV" == production && echo "--no-dev") --no-ansi
 
+
 # add app
 COPY . .
+
+# add entrypoint.sh
+COPY ./entrypoint.sh .
+RUN chmod +x /usr/src/app/entrypoint.sh
+
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
