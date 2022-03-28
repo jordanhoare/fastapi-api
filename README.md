@@ -38,9 +38,7 @@ FastAPI // Docker // PostgreSQL
 1. To access the database via psql:
 
     ```
-    
     docker-compose logs web
-    
     \c web_dev
     \dt
     ```
@@ -49,6 +47,8 @@ FastAPI // Docker // PostgreSQL
 </br>
 
 </br>
+
+=== 
 
 <p align="center">
     <a href="https://www.linkedin.com/in/jordan-hoare/">
