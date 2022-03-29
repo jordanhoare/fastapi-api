@@ -59,13 +59,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 - Build the image and spin up the two containers:
     ```
-    chmod +x project/entrypoint.sh
     docker-compose up -d --build
-    ```
-- Create the first migration (Aerich init):
-    ```
-    docker-compose exec web aerich init-db
-    docker-compose exec web aerich upgrade
     ```
 - Apply migration:
     ```
@@ -85,7 +79,30 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
     docker-compose exec web python app/db.py
     ```
+- Create the first migration (Aerich init):
+    ```
+    docker-compose exec web aerich init-db
+    ```
+- Define entrypoint:
+    ```
+    chmod +x project/entrypoint.sh
+    ```
 </details>
+
+</br>
+
+<details>
+  <summary>CRUD / API Interaction</summary>
+
+- Test routes with curl or HTTPie::
+    ```
+    http --json POST http://localhost:8004/summaries/
+    ```
+</details>
+
+</br>
+
+</br>
 
 </br>
 
