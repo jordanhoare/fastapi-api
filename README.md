@@ -2,7 +2,7 @@
 
 </br>
 
-An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres run inside Docker containers and pytests are configured in order to practice Test-Driven Development (TDD).
+An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres run inside Docker containers and pytests are configured in order to practice Test-Driven Development (TDD).  The app is accessable @ http://fast-sea-13591.herokuapp.com/ping.
 
 </br>
 
