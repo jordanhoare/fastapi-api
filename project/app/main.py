@@ -9,14 +9,6 @@ log = logging.getLogger("uvicorn")
 
 
 def create_application() -> FastAPI:
-    """
-    Initialises the FastAPIapp
-        - Includes tags for grouping operations (https://swagger.io/docs/specification/grouping-operations-with-tags/))
-    ---------------------------
-    Routes:
-        ping -> pong(): returns environment (dev, stage, prod) & testing config (y/n) of active pydantic BaseSetting
-        summaries: define a handler that expects a payload (SummaryPayloadSchema), w/ a URL.
-    """
     application = FastAPI()
 
     application.include_router(ping.router)
