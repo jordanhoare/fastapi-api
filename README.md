@@ -1,4 +1,5 @@
-[![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/fastapi-api) 
+![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main) [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers)
+
 
 </br>
 
@@ -17,7 +18,7 @@ You can find a live demo at: http://fast-sea-13591.herokuapp.com/ping.
 - [x] Containerize FastAPI and Postgres inside a Docker container
 - [x] Deploy dockerized app to Heroku
 - [ ] Run unit and integration tests with code coverage
-- [ ] Improve code quality with linter
+- [x] Improve code quality with linter
 - [ ] Configure GitHub Actions for continuous integration and deployment
 - [ ] Speed up a Docker-based CI build with Docker Cache
 - [ ] Run tests in parallel
@@ -257,6 +258,27 @@ D:\CompSci\Projects\fastapi-api\README.md
 </br>
 
 <details>
+  <summary>Github Actions</summary>
+
+</br>
+
+- Build and tag the image:
+    ```
+    docker build -f project/Dockerfile.prod -t docker.pkg.github.com/<USERNAME>/<REPOSITORY_NAME>/summarizer:latest ./project
+    ```
+-  Authenticate to GitHub Packages with Docker:
+    ```
+    docker login docker.pkg.github.com -u <USERNAME> -p <TOKEN>
+    ```
+-  Push the image to the Container registry on GitHub Packages
+    ```
+    docker push docker.pkg.github.com/<USERNAME>/<REPOSITORY_NAME>/summarizer:latest
+    ```
+</details>
+
+</br>
+
+<details>
   <summary>CRUD / API Interaction</summary>
 
 </br>
@@ -264,6 +286,7 @@ D:\CompSci\Projects\fastapi-api\README.md
 - Test routes locally with HTTPie:
     ```
     http --json POST http://localhost:8004/summaries/ url=https://testerwebsite.io
+    ```
 - Test routes of deployed container with HTTPie:
     ```
     http --json POST https://fast-sea-13591.herokuapp.com/summaries/ url=https://testerwebsite.io
