@@ -92,9 +92,8 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 - Build the production image:
     ```
-    docker build -f project/Dockerfile.prod -t registry.heroku.com/<app>/<process-type> ./project
-        app: the name of the Heroku app 
-        process-type -> web: since this will be a web dyno
+    docker build -f project/Dockerfile.prod -t registry.heroku.com/fast-sea-13591/web ./project
+        fast-sea-13591: change to the name of the Heroku app 
     ```
 </details>
 
@@ -199,15 +198,36 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
+* fast-sea-13591: change to the name of the Heroku app 
+
 - Provision a Postgres database:
     ```
     heroku addons:create heroku-postgresql:hobby-dev --app
     ```
 - Build the production image:
     ```
-    docker build -f project/Dockerfile.prod -t registry.heroku.com/<app>/<process-type> ./project
-        app: the name of the Heroku app 
-        process-type -> web: since this will be a web dyno
+    docker build -f project/Dockerfile.prod -t registry.heroku.com/fast-sea-13591/web ./project
+    ```
+- To test locally, spin up the container:
+    ```
+    docker run --name fastapi-tdd -e PORT=8765 -e DATABASE_URL=sqlite://sqlite.db -p 5003:8765 registry.heroku.com/fast-sea-13591/web:latest
+        test @ http://localhost:5003/ping/
+    ```
+- Bring down the container:
+    ```
+    docker rm fastapi-tdd -f
+    ```
+- Push image to registry:
+    ```
+    docker push registry.heroku.com/fast-sea-13591/web:latest
+    ```
+- Release the image:
+    ```
+    heroku container:release web --app fast-sea-13591
+    ```
+- Apply the migrations:
+    ```
+    heroku run aerich upgrade --app fast-sea-13591
     ```
 </details>
 
