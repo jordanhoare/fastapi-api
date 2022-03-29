@@ -158,9 +158,11 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
     docker-compose exec web python -m pytest --durations=2
     ```
-
 </br>
 
+</details>
+
+</br>
 
 <details>
   <summary>CRUD / API Interaction</summary>
