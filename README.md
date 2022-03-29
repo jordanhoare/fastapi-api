@@ -13,7 +13,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - [x] Test a FastAPI app with pytest
 - [x] Interact with a Postgres database asynchronously
 - [x] Containerize FastAPI and Postgres inside a Docker container
-- [ ] Deploy dockerized app to Heroku
+- [x] Deploy dockerized app to Heroku
 - [ ] Run unit and integration tests with code coverage
 - [ ] Improve code quality with linter
 - [ ] Configure GitHub Actions for continuous integration and deployment
@@ -74,6 +74,8 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
+* fast-sea-13591: change to the name of the Heroku app 
+
 - Login:
     ```
     heroku login
@@ -93,8 +95,21 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - Build the production image:
     ```
     docker build -f project/Dockerfile.prod -t registry.heroku.com/fast-sea-13591/web ./project
-        fast-sea-13591: change to the name of the Heroku app 
     ```
+- Push image to registry:
+    ```
+    docker push registry.heroku.com/fast-sea-13591/web:latest
+    ```
+- Release the image:
+    ```
+    heroku container:release web --app fast-sea-13591
+    ```
+- Apply the migrations:
+    ```
+    heroku run aerich upgrade --app fast-sea-13591
+    ```
+</details>
+
 </details>
 
 </br>
