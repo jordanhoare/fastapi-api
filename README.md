@@ -3,62 +3,40 @@ FastAPI // Docker // PostgreSQL
 [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/fastapi-api) 
 
 
-## Requirements 
-- [Git](https://git-scm.com/) for command-line interface 
-- [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
-- [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
-- [Docker](https://docs.docker.com/get-docker/) for developing, shipping, and running applications
 
 
 </br>
 
-# A collapsible section with markdown
-<details>
-  <summary>Click to expand!</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
-
-
 ## Reproduction on a local machine
+
+
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Reproduction on a local machine</summary>
 
-### Heading 2
-1. Clone the GitHub repository to an empty folder on your local machine:
-
-    ```
-    gh repo clone jordanhoare/fastapi-api
-    ```
-
-1. Initialise poetry:
-
-    ```
-    poetry build
-    ```
-
-1. Build a docker image and run the container in detached mode:
-
-    ```
-    docker-compose build
-    docker-compose up -d
-    docker-compose logs web
-    ```
-
-1. Check the logs of the web service:
-
-    ```
-    docker-compose logs web
-    ```
-
+  ## Requirements 
+- [Git](https://git-scm.com/) for command-line interface 
+- [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
+- [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
+- [Docker](https://docs.docker.com/get-docker/) for developing, shipping, and running applications
 </details>
 
+</br>
 
-## Docker Commands
+
+
+
+<details>
+  <summary>Reproduction on a local machine</summary>
+
+  ## Requirements 
+- [Git](https://git-scm.com/) for command-line interface 
+- [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
+- [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
+- [Docker](https://docs.docker.com/get-docker/) for developing, shipping, and running applications
+</details>
+
+<details>
+  <summary>Useful Docker Commands</summary>
 
 1. Build the image and spin up the two containers:
 
@@ -96,6 +74,9 @@ FastAPI // Docker // PostgreSQL
     ```
     docker-compose exec web python app/db.py
     ```
+</details>
+
+</br>
 
 </br>
 
