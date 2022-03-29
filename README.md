@@ -36,6 +36,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
 - [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
 - [Docker](https://docs.docker.com/get-docker/) for developing, shipping, and running applications
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) for cloud deployment
 </details>
 
 </br>
@@ -62,6 +63,39 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - Check the logs of the web service:
     ```
     docker-compose logs web
+    ```
+</details>
+
+</br>
+
+</br>
+
+<details>
+  <summary>Heroku Deployment</summary>
+
+</br>
+
+- Login:
+    ```
+    heroku login
+    ```
+- Create a new app:
+    ```
+    heroku create
+    ```
+- Register container:
+    ```
+    heroku container:login
+    ```
+- Provision a Postgres database:
+    ```
+    heroku addons:create heroku-postgresql:hobby-dev --app
+    ```
+- Build the production image:
+    ```
+    @ registry.heroku.com/<app>/<process-type>
+        <app> == with the name of the Heroku app 
+        <process-type> == web since this will be a web dyno
     ```
 </details>
 
@@ -160,6 +194,25 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 </br>
 
+</details>
+
+</br>
+
+<details>
+  <summary>Heroku commands</summary>
+
+</br>
+
+- Provision a Postgres database:
+    ```
+    heroku addons:create heroku-postgresql:hobby-dev --app
+    ```
+- Build the production image:
+    ```
+    @ registry.heroku.com/<app>/<process-type>
+        <app> == with the name of the Heroku app 
+        <process-type> == web since this will be a web dyno
+    ```
 </details>
 
 </br>
