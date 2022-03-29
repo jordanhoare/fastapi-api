@@ -14,33 +14,37 @@ FastAPI // Docker // PostgreSQL
 
 
 ## Reproduction on a local machine
+<details>
+  <summary>Click to expand!</summary>
 
-1. Clone the GitHub repository to an empty folder on your local machine:
+    ### Heading 2
+    1. Clone the GitHub repository to an empty folder on your local machine:
 
-    ```
-    gh repo clone jordanhoare/fastapi-api
-    ```
+        ```
+        gh repo clone jordanhoare/fastapi-api
+        ```
 
-1. Initialise poetry:
+    1. Initialise poetry:
 
-    ```
-    poetry build
-    ```
+        ```
+        poetry build
+        ```
 
-1. Build a docker image and run the container in detached mode:
+    1. Build a docker image and run the container in detached mode:
 
-    ```
-    docker-compose build
-    docker-compose up -d
-    docker-compose logs web
-    ```
+        ```
+        docker-compose build
+        docker-compose up -d
+        docker-compose logs web
+        ```
 
-1. Check the logs of the web service:
+    1. Check the logs of the web service:
 
-    ```
-    docker-compose logs web
-    ```
-
+        ```
+        docker-compose logs web
+        ```
+        
+</details>
 
 
 ## Docker Commands
