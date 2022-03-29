@@ -13,7 +13,7 @@ FastAPI // Docker // PostgreSQL
 </br>
 
 
-## Manual Build on Your Local Machine
+## Reproduction on a local machine
 
 1. Clone the GitHub repository to an empty folder on your local machine:
 
@@ -21,40 +21,70 @@ FastAPI // Docker // PostgreSQL
     gh repo clone jordanhoare/fastapi-api
     ```
 
+1. Initialise poetry:
+
+    ```
+    poetry build
+    ```
+
+1. Build a docker image and run the container in detached mode:
+
+    ```
+    docker-compose build
+    docker-compose up -d
+    docker-compose logs web
+    ```
+
+1. Check the logs of the web service:
+
+    ```
+    docker-compose logs web
+    ```
+
+
+
+## Docker Commands
+
 1. Build the image and spin up the two containers:
 
     ```
     chmod +x project/entrypoint.sh
     docker-compose up -d --build
-    docker-compose exec web-db psql -U postgres
     ```
 
-1. Create the first migration:
+1. Create the first migration (Aerich init):
 
     ```
     docker-compose exec web aerich init-db
+    docker-compose exec web aerich upgrade
     ```
 
-1. To access the database via psql:
+1. Apply migration:
+    ```
+    docker-compose exec web aerich upgrade
+    ```
+
+1. Access data tables via psql:
 
     ```
-    docker-compose logs web
+    docker-compose exec web-db psql -U postgres
     \c web_dev
     \dt
     ```
 
 1. With the containers up and running, run the tests:
-
     ```
     docker-compose exec web python -m pytest
     ```
 
+1. Generate schema via Tortoise:
+    ```
+    docker-compose exec web python app/db.py
+    ```
 
 </br>
 
 </br>
-
-=== 
 
 <p align="center">
     <a href="https://www.linkedin.com/in/jordan-hoare/">
