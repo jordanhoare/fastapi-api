@@ -10,7 +10,11 @@ log = logging.getLogger("uvicorn")
 
 def create_application() -> FastAPI:
     """
-    comment test
+    Routes:
+        summaries: define a handler that expects a payload (SummaryPayloadSchema), with a URL.
+        ping -> pong(): returns environment (dev, stage, prod) & testing config (y/n) of active pydantic BaseSetting
+
+    + Include tags for grouping operations (https://swagger.io/docs/specification/grouping-operations-with-tags/)
     """
     application = FastAPI()
     application.include_router(ping.router)
@@ -26,7 +30,7 @@ app = create_application()
 @app.on_event("startup")
 async def startup_event():
     log.info("Starting up...")
-    init_db(app)  # in dev Aerich to manage the database schema
+    init_db(app)
 
 
 @app.on_event("shutdown")
