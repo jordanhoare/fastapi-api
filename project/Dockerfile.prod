@@ -33,7 +33,7 @@ ENV YOUR_ENV=${YOUR_ENV} \
 RUN pip install "poetry==$POETRY_VERSION"
 
 # set working directory
-COPY poetry.lock pyproject.toml /home/app/
+COPY poetry.lock pyproject.toml /home/app/web/
 
 # install system dependencies
 RUN apt-get update \
