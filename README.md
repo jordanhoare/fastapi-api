@@ -92,9 +92,9 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 - Build the production image:
     ```
-    @ registry.heroku.com/<app>/<process-type>
-        <app> == with the name of the Heroku app 
-        <process-type> == web since this will be a web dyno
+    docker build -f project/Dockerfile.prod -t registry.heroku.com/<app>/<process-type> ./project
+        app: the name of the Heroku app 
+        process-type -> web: since this will be a web dyno
     ```
 </details>
 
@@ -205,9 +205,9 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 - Build the production image:
     ```
-    @ registry.heroku.com/<app>/<process-type>
-        <app> == with the name of the Heroku app 
-        <process-type> == web since this will be a web dyno
+    docker build -f project/Dockerfile.prod -t registry.heroku.com/<app>/<process-type> ./project
+        app: the name of the Heroku app 
+        process-type -> web: since this will be a web dyno
     ```
 </details>
 
