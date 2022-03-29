@@ -6,6 +6,25 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
+
+## Learning Objectives
+- [x] Develop an asynchronous RESTful API with Python and FastAPI
+- [x] Practice Test-Driven Development
+- [x] Test a FastAPI app with pytest
+- [x] Interact with a Postgres database asynchronously
+- [x] Containerize FastAPI and Postgres inside a Docker container
+- [ ] Run unit and integration tests with code coverage
+- [ ] Improve code quality with linter
+- [ ] Configure GitHub Actions for continuous integration and deployment
+- [ ] Speed up a Docker-based CI build with Docker Cache
+- [ ] Deploy FastAPI, Uvicorn, and Postgres to Heroku with Docker
+- [ ] Run tests in parallel
+- [ ] Run a background process outside the request/response flow
+
+</br>
+
+
+
 ## Installation & Usage
 
 <details>
