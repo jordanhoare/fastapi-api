@@ -53,6 +53,10 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
+- Bring down the containers and volumes
+    ```
+    docker-compose down -v
+    ```
 - Build the image and spin up the two containers:
     ```
     chmod +x project/entrypoint.sh
