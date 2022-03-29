@@ -67,6 +67,13 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
+
+</br>
+
+
+
+## User Guide
+
 <details>
   <summary>Useful docker commands</summary>
 
@@ -105,19 +112,6 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - Define entrypoint:
     ```
     chmod +x project/entrypoint.sh
-    ```
-</details>
-
-</br>
-
-<details>
-  <summary>CRUD / API Interaction</summary>
-
-</br>
-
-- Test routes with HTTPie::
-    ```
-    http --json POST http://localhost:8004/summaries/ http://testurl.io
     ```
 </details>
 
@@ -166,6 +160,18 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
     ```
 
 </br>
+
+
+<details>
+  <summary>CRUD / API Interaction</summary>
+
+</br>
+
+- Test routes with HTTPie::
+    ```
+    http --json POST http://localhost:8004/summaries/ http://testurl.io
+    ```
+</details>
 
 </br>
 
