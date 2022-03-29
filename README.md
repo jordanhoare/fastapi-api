@@ -3,14 +3,14 @@ FastAPI // Docker // PostgreSQL
 [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/fastapi-api) 
 
 
-
-
-</br>
+An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres run inside Docker containers and pytests are configured in order to practice Test-Driven Development (TDD).
 
 </br>
 
+</br>
 
-## Notes
+
+## Installation & Usage
 
 <details>
   <summary>Requirements</summary>
@@ -56,6 +56,7 @@ FastAPI // Docker // PostgreSQL
   <summary>Useful docker commands</summary>
 
 </br>
+
 1. Build the image and spin up the two containers:
     ```
     chmod +x project/entrypoint.sh
