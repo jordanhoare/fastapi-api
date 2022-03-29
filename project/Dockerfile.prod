@@ -7,7 +7,6 @@ RUN mkdir -p /home/app
 # create the app user
 RUN addgroup --system app && adduser --system --group app
 
-
 # create the appropriate directories
 ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
@@ -29,6 +28,12 @@ ENV YOUR_ENV=${YOUR_ENV} \
   PIP_DEFAULT_TIMEOUT=100 \
   # poetry:
   POETRY_VERSION=1.1.12
+
+# system depens:
+RUN pip install "poetry==$POETRY_VERSION"
+
+# set working directory
+COPY poetry.lock pyproject.toml /home/app/
 
 # install system dependencies
 RUN apt-get update \
