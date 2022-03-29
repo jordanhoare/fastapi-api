@@ -7,9 +7,6 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
-</br>
-
-
 ## Installation & Usage
 
 <details>
