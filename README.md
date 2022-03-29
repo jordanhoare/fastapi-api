@@ -43,6 +43,12 @@ FastAPI // Docker // PostgreSQL
     \dt
     ```
 
+1. With the containers up and running, run the tests:
+
+    ```
+    docker-compose exec web python -m pytest
+    ```
+
 
 </br>
 

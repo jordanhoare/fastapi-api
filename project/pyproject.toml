@@ -15,6 +15,8 @@ pip = "^22.0.4"
 asyncpg = "^0.25.0"
 tortoise-orm = "^0.19.0"
 aerich = "^0.6.2"
+pytest = "^7.1.1"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^21.12b0", allow-prereleases = true}
