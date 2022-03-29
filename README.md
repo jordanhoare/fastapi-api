@@ -15,7 +15,7 @@ FastAPI // Docker // PostgreSQL
 <details>
   <summary>Requirements</summary>
 
-  ## Requirements 
+</br>
 - [Git](https://git-scm.com/) for command-line interface 
 - [Pyenv](https://github.com/pyenv/pyenv) for Python version management tool
 - [Poetry](https://python-poetry.org/docs/) for dependency management and packaging
@@ -27,6 +27,7 @@ FastAPI // Docker // PostgreSQL
 <details>
   <summary>Reproduction on a local machine</summary>
 
+</br>
 1. Clone the GitHub repository to an empty folder on your local machine:
     ```
     gh repo clone jordanhoare/fastapi-api
@@ -52,6 +53,7 @@ FastAPI // Docker // PostgreSQL
 <details>
   <summary>Useful docker commands</summary>
 
+</br>
 1. Build the image and spin up the two containers:
     ```
     chmod +x project/entrypoint.sh
