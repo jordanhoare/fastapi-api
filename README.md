@@ -68,7 +68,6 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
-</br>
 
 <details>
   <summary>Heroku Deployment</summary>
@@ -101,12 +100,9 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
-
 </br>
 
-
-
-## Useful Commands (Docker / Pytest / APIs)
+## Useful Commands
 
 <details>
   <summary>Useful docker commands</summary>
