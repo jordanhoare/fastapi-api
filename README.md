@@ -7,7 +7,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 </br>
 
 
-## Learning Objectives
+## Dev Objectives
 - [x] Develop an asynchronous RESTful API with Python and FastAPI
 - [x] Practice Test-Driven Development
 - [x] Test a FastAPI app with pytest
