@@ -94,6 +94,8 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 <details>
   <summary>CRUD / API Interaction</summary>
 
+</br>
+
 - Test routes with curl or HTTPie::
     ```
     http --json POST http://localhost:8004/summaries/ http://testurl.io
