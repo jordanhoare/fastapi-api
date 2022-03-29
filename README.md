@@ -255,9 +255,12 @@ You can find a live demo at: http://fast-sea-13591.herokuapp.com/ping.
 
 </br>
 
-- Test routes with HTTPie::
+- Test routes locally with HTTPie:
     ```
-    http --json POST http://localhost:8004/summaries/ http://testurl.io
+    http --json POST http://localhost:8004/summaries/ url=https://testerwebsite.io
+- Test routes of deployed container with HTTPie:
+    ```
+    http --json POST https://fast-sea-13591.herokuapp.com/summaries/ url=https://testerwebsite.io
     ```
 </details>
 
