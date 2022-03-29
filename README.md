@@ -30,21 +30,21 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
-1. Clone the GitHub repository to an empty folder on your local machine:
+- Clone the GitHub repository to an empty folder on your local machine:
     ```
     gh repo clone jordanhoare/fastapi-api
     ```
-1. Initialise poetry:
+- Initialise poetry:
     ```
     poetry build
     ```
-1. Build a docker image and run the container in detached mode:
+- Build a docker image and run the container in detached mode:
     ```
     docker-compose build
     docker-compose up -d
     docker-compose logs web
     ```
-1. Check the logs of the web service:
+- Check the logs of the web service:
     ```
     docker-compose logs web
     ```
@@ -57,31 +57,31 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 </br>
 
-1. Build the image and spin up the two containers:
+- Build the image and spin up the two containers:
     ```
     chmod +x project/entrypoint.sh
     docker-compose up -d --build
     ```
-1. Create the first migration (Aerich init):
+- Create the first migration (Aerich init):
     ```
     docker-compose exec web aerich init-db
     docker-compose exec web aerich upgrade
     ```
-1. Apply migration:
+- Apply migration:
     ```
     docker-compose exec web aerich upgrade
     ```
-1. Access data tables via psql:
+- Access data tables via psql:
     ```
     docker-compose exec web-db psql -U postgres
     \c web_dev
     \dt
     ```
-1. With the containers up and running, run the tests:
+- With the containers up and running, run the tests:
     ```
     docker-compose exec web python -m pytest
     ```
-1. Generate schema via Tortoise:
+- Generate schema via Tortoise:
     ```
     docker-compose exec web python app/db.py
     ```
