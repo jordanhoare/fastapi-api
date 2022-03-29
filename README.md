@@ -72,7 +72,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 
 
 
-## User Guide
+## Useful Commands (Docker / Pytest / APIs)
 
 <details>
   <summary>Useful docker commands</summary>
