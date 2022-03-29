@@ -1,8 +1,9 @@
 import logging
 
+from fastapi import FastAPI
+
 from app.api import ping
 from app.db import init_db
-from fastapi import FastAPI
 
 log = logging.getLogger("uvicorn")
 
@@ -20,7 +21,7 @@ app = create_application()
 @app.on_event("startup")
 async def startup_event():
     log.info("Starting up...")
-    init_db(app)
+    init_db(app)  # in dev Aerich to manage the database schema
 
 
 @app.on_event("shutdown")
