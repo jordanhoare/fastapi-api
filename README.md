@@ -159,6 +159,12 @@ You can find a live demo at: http://fast-sea-13591.herokuapp.com/ping.
     ```
     chmod +x project/entrypoint.sh
     ```
+- Code quality:
+    ```
+    docker-compose exec web black . --check
+    docker-compose exec web isort . --check-only
+    docker-compose exec web flake8 .
+    ```
 </details>
 
 </br>
@@ -167,7 +173,7 @@ You can find a live demo at: http://fast-sea-13591.herokuapp.com/ping.
   <summary>Pytest commands</summary>
 
 </br>
-
+D:\CompSci\Projects\fastapi-api\README.md
 - Normal run
     ```
     docker-compose exec web python -m pytest
