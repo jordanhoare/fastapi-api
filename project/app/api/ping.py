@@ -12,7 +12,7 @@ async def pong(settings: Settings = Depends(get_settings)):
     settings: The value returned (Settings) is assigned for the return statements
     """
     return {
-        "ping": "pong!",
+        "ping": "pong",
         "environment": settings.environment,
         "testing": settings.testing,
     }
