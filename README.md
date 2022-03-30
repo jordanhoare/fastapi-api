@@ -1,13 +1,11 @@
 
-http://fast-sea-13591.herokuapp.com/ping.
-
 ![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
+
+Live Demo:  http://fast-sea-13591.herokuapp.com/ping.
 
 </br>
 
 An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres run inside Docker containers and pytests are configured in order to practice Test-Driven Development (TDD).  The app is deployable to Heroku (a free cloud PaaS) using a Gunicorn WSGI server.
-
-
 
 </br>
 
