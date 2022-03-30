@@ -1,10 +1,11 @@
 from typing import List
 
-from fastapi import APIRouter, HTTPException, Path
+from fastapi import APIRouter, BackgroundTasks, HTTPException, Path
 
 from app.api import crud
 from app.models.pydantic import SummaryPayloadSchema, SummaryResponseSchema
 from app.models.tortoise import SummarySchema
+from app.summariser import generate_summary
 
 from app.models.pydantic import (  # isort:skip
     SummaryPayloadSchema,
@@ -16,7 +17,9 @@ router = APIRouter()
 
 
 @router.post("/", response_model=SummaryResponseSchema, status_code=201)
-async def create_summary(payload: SummaryPayloadSchema) -> SummaryResponseSchema:
+async def create_summary(
+    payload: SummaryPayloadSchema, background_tasks: BackgroundTasks
+) -> SummaryResponseSchema:
     """Define a handler that expects a payload (SummaryPayloadSchema), with a URL.
 
     When the route is hit with a POST request, FastAPI will read the body of the request and validate the data:
@@ -24,6 +27,8 @@ async def create_summary(payload: SummaryPayloadSchema) -> SummaryResponseSchema
     Invalid -> an error is immediately returned.
     """
     summary_id = await crud.post(payload)
+
+    background_tasks.add_task(generate_summary, summary_id, payload.url)
 
     response_object = {"id": summary_id, "url": payload.url}
     return response_object

@@ -5,20 +5,6 @@ from app.models.tortoise import TextSummary
 from app.summariser import generate_summary
 
 
-async def post(payload: SummaryPayloadSchema) -> int:
-    """A utility function to create new summaries
-    - takes a payload object
-    - creates a new TextSummary instance
-    - returns the generated ID
-    """
-    summary = TextSummary(
-        url=payload.url,
-        summary="placeholder summary",
-    )
-    await summary.save()
-    return summary.id
-
-
 async def get(id: int) -> Union[dict, None]:
     summary = await TextSummary.filter(id=id).first().values()
     if summary:
@@ -45,9 +31,12 @@ async def put(id: int, payload: SummaryPayloadSchema) -> Union[dict, None]:
         return updated_summary
     return None
 
-
 async def post(payload: SummaryPayloadSchema) -> int:
-    article_summary = generate_summary(payload.url)
-    summary = TextSummary(url=payload.url, summary=article_summary)
+    """A utility function to create new summaries
+    - takes a payload object
+    - creates a new TextSummary instance
+    - returns the generated ID
+    """
+    summary = TextSummary(url=payload.url, summary="")
     await summary.save()
     return summary.id

@@ -15,6 +15,7 @@ ENV YOUR_ENV=${YOUR_ENV} \
 
 # system depens:
 RUN pip install "poetry==$POETRY_VERSION"
+RUN pip install nltk
 
 # set working directory
 WORKDIR /usr/src/app
