@@ -1,4 +1,4 @@
-![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main) ![LiveDemo](https://img.shields.io/website?url=http%3A%2F%2Ffast-sea-13591.herokuapp.com%2Fping)
+![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main) ![LiveDemo](https://img.shields.io/website?url=https://fast-sea-13591.herokuapp.com/ping)
 
 </br>
 
