@@ -174,7 +174,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
   <summary>Pytest commands</summary>
 
 </br>
-D:\CompSci\Projects\fastapi-api\README.md
+
 - Normal run
     ```
     docker-compose exec web python -m pytest
@@ -279,12 +279,37 @@ D:\CompSci\Projects\fastapi-api\README.md
 </br>
 
 <details>
-  <summary>CRUD / API Interaction</summary>
+  <summary>HTTPie Tests</summary>
 
 </br>
 
-- Test routes locally with HTTPie:
+- GET single summary:
     ```
+    http GET https://fast-sea-13591.herokuapp.com/summaries/1/
+    ```
+- GET all summaries:
+    ```
+    http GET https://fast-sea-13591.herokuapp.com/summaries/
+    ```
+- POST:
+    ```
+    http --json POST https://fast-sea-13591.herokuapp.com/summaries/ url=https://test.com
+    ```
+- PUT:
+    ```
+    http --json PUT https://fast-sea-13591.herokuapp.com/summaries/2/ url=https://test.com summary=super
+    ```
+- DELETE:
+    ```
+    http DELETE https://fast-sea-13591.herokuapp.com/summaries/2/
+    ```
+
+
+
+
+- PUT:
+    ```
+    http GET https://fast-sea-13591.herokuapp.com/summaries/
     http --json POST http://localhost:8004/summaries/ url=https://testerwebsite.io
     ```
 - Test routes of deployed container with HTTPie:
