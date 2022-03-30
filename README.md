@@ -1,4 +1,4 @@
-![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main) [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers)
+[!Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main) [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/fastapi-api.svg)](https://github.com/jordanhoare/fastapi-api/stargazers)
 
 
 </br>
