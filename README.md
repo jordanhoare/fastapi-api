@@ -19,7 +19,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - [x] Deploy dockerized app to Heroku
 - [ ] Run unit and integration tests with code coverage
 - [x] Improve code quality with linter
-- [ ] Configure GitHub Actions for continuous integration and deployment
+- [x] Configure GitHub Actions for continuous integration and deployment
 - [ ] Speed up a Docker-based CI build with Docker Cache
 - [ ] Run tests in parallel
 - [ ] Run a background process outside the request/response flow
