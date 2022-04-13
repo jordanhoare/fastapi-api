@@ -1,8 +1,17 @@
 from fastapi import APIRouter, Depends
+from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
 
 from app.config import Settings, get_settings
 
 router = APIRouter()
+
+templates = Jinja2Templates(directory="/templates")
+
+
+@router.get("/home")
+async def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @router.get("/ping")
