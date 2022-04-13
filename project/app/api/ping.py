@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends
+from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
 
@@ -11,7 +12,7 @@ templates = Jinja2Templates(
 )
 
 
-@router.get("/home")
+@router.get("/home", response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
@@ -23,7 +24,7 @@ async def pong(settings: Settings = Depends(get_settings)):
     settings: The value returned (Settings) is assigned for the return statements
     """
     return {
-        "ping": "pong",
+        "ping": "dong",
         "environment": settings.environment,
         "testing": settings.testing,
     }
