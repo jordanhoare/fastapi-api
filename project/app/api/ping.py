@@ -8,7 +8,7 @@ from app.config import Settings, get_settings
 router = APIRouter()
 
 templates = Jinja2Templates(
-    directory="fastapi-api/project/app/api/templates",
+    directory="templates",
 )
 
 
@@ -24,7 +24,7 @@ async def pong(settings: Settings = Depends(get_settings)):
     settings: The value returned (Settings) is assigned for the return statements
     """
     return {
-        "ping": "dong",
+        "ping": "pong",
         "environment": settings.environment,
         "testing": settings.testing,
     }
