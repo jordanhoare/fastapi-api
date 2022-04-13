@@ -1,6 +1,8 @@
 from typing import List
 
 from fastapi import APIRouter, BackgroundTasks, HTTPException, Path
+from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
 
 from app.api import crud
 from app.models.pydantic import SummaryPayloadSchema, SummaryResponseSchema
@@ -12,6 +14,7 @@ from app.models.pydantic import (  # isort:skip
     SummaryResponseSchema,
     SummaryUpdatePayloadSchema,
 )
+
 
 router = APIRouter()
 
@@ -68,3 +71,11 @@ async def update_summary(
         raise HTTPException(status_code=404, detail="Summary not found")
 
     return summary
+
+
+templates = Jinja2Templates(directory="/templates")
+
+
+@router.get("/home")
+def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
