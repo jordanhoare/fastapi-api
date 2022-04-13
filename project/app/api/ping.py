@@ -8,7 +8,7 @@ from app.config import Settings, get_settings
 router = APIRouter()
 
 templates = Jinja2Templates(
-    directory="templates/pages/",
+    directory="templates",
 )
 
 
@@ -22,7 +22,6 @@ def index(request: Request):
         {
             "request": request,
             "title": "Test",
-            "body_content": "This is the test for using FastAPI with Jinja templates",
         },
     )
 
