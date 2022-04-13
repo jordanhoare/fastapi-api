@@ -1,6 +1,8 @@
 import logging
 
 from fastapi import FastAPI
+from fastapi.templating import Jinja2Templates
+from starlette.requests import Request
 
 from app.api import ping, summaries
 from app.db import init_db
@@ -29,6 +31,9 @@ def create_application() -> FastAPI:
 app = create_application()
 
 
+templates = Jinja2Templates(directory="templates")
+
+
 @app.on_event("startup")
 async def startup_event():
     log.info("Starting up...")
@@ -38,3 +43,8 @@ async def startup_event():
 @app.on_event("shutdown")
 async def shutdown_event():
     log.info("Shutting down...")
+
+
+@app.get("/")
+def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
