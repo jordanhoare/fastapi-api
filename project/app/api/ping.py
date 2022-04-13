@@ -6,7 +6,9 @@ from app.config import Settings, get_settings
 
 router = APIRouter()
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(
+    directory="fastapi-api/project/app/api/templates",
+)
 
 
 @router.get("/home")
