@@ -45,6 +45,6 @@ async def shutdown_event():
     log.info("Shutting down...")
 
 
-@app.get("/")
+@app.get("/home")
 def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
