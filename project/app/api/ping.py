@@ -8,13 +8,23 @@ from app.config import Settings, get_settings
 router = APIRouter()
 
 templates = Jinja2Templates(
-    directory="templates",
+    directory="templates/pages/",
 )
 
 
-@router.get("/home", response_class=HTMLResponse)
-async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+@router.get("/", response_class=HTMLResponse)
+def index(request: Request):
+    """
+    ...
+    """
+    return templates.TemplateResponse(
+        "index.html",
+        {
+            "request": request,
+            "title": "Test",
+            "body_content": "This is the test for using FastAPI with Jinja templates",
+        },
+    )
 
 
 @router.get("/ping")
@@ -24,7 +34,7 @@ async def pong(settings: Settings = Depends(get_settings)):
     settings: The value returned (Settings) is assigned for the return statements
     """
     return {
-        "ping": "pong",
+        "ping": "pong!",
         "environment": settings.environment,
         "testing": settings.testing,
     }
