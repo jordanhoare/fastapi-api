@@ -18,6 +18,8 @@ from app.models.pydantic import (  # isort:skip
 
 router = APIRouter()
 
+templates = Jinja2Templates(directory="/templates")
+
 
 @router.post("/", response_model=SummaryResponseSchema, status_code=201)
 async def create_summary(
@@ -71,9 +73,6 @@ async def update_summary(
         raise HTTPException(status_code=404, detail="Summary not found")
 
     return summary
-
-
-templates = Jinja2Templates(directory="/templates")
 
 
 @router.get("/home")
