@@ -16,6 +16,7 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - [x] Test a FastAPI app with pytest
 - [x] Interact with a Postgres database asynchronously
 - [x] Containerize FastAPI and Postgres inside a Docker container
+- [x] Configure index.html from [Atlantis-Lite UI template](https://github.com/themekita/Atlantis-Lite)
 - [x] Deploy dockerized app to Heroku
 - [ ] Run unit and integration tests with code coverage
 - [x] Improve code quality with linter
