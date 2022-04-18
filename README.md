@@ -1,7 +1,7 @@
 
 ![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
 
-Live Demo:  http://fast-sea-13591.herokuapp.com/ping.
+Live Demo:  http://fast-sea-13591.herokuapp.com/.
 
 </br>
 
