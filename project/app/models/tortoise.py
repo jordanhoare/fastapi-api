@@ -40,7 +40,7 @@ class Stock_Price(models.Model):
     )
 
 
-init_models(["__main__"], "models")
+# Tortoise.init_models(["__main__"], "models")
 Stock_Pydantic = pydantic_model_creator(Stock)
 Stock_Price_Pydantic = pydantic_model_creator(Stock_Price)
 
@@ -61,5 +61,5 @@ Stock_Price_Pydantic = pydantic_model_creator(Stock_Price)
 #     def __str__(self):
 #         return self.url
 
-
+# Tortoise.init_models(["__main__"], "models")
 # SummarySchema = pydantic_model_creator(TextSummary)
