@@ -3,8 +3,7 @@
 # from tortoise import fields, models
 # from tortoise.contrib.pydantic import pydantic_model_creator
 
-
-from Tortoise import Tortoise, fields, models
+from tortoise import fields, init_models, models
 from tortoise.contrib.pydantic import pydantic_model_creator
 
 
@@ -41,7 +40,7 @@ class Stock_Price(models.Model):
     )
 
 
-Tortoise.init_models(["__main__"], "models")
+init_models(["__main__"], "models")
 Stock_Pydantic = pydantic_model_creator(Stock)
 Stock_Price_Pydantic = pydantic_model_creator(Stock_Price)
 
