@@ -2,7 +2,7 @@ from pydantic import AnyHttpUrl, BaseModel
 
 
 class SummaryPayloadSchema(BaseModel):
-    url: str
+    url: AnyHttpUrl
 
 
 class SummaryResponseSchema(SummaryPayloadSchema):
@@ -11,7 +11,3 @@ class SummaryResponseSchema(SummaryPayloadSchema):
 
 class SummaryUpdatePayloadSchema(SummaryPayloadSchema):
     summary: str
-
-
-class SummaryPayloadSchema(BaseModel):
-    url: AnyHttpUrl
