@@ -5,7 +5,7 @@ Live Demo:  http://fast-sea-13591.herokuapp.com/.
 
 </br>
 
-A python web-application built to evaluate portfolio holdings and screen stock announcements and charts for bearish/bullish patterns.  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
+A python web-application built to evaluate portfolio holdings by screening company announcements and stock charts for bearish/bullish patterns.  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
 
 </br>
 
