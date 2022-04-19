@@ -9,11 +9,14 @@ A python web-application built to evaluate portfolio holdings and screen stock a
 
 </br>
 
+![Alt text](project/static/img/screenshot.png)
+
 ## Features
 - [x] Containerize FastAPI and Postgres inside a Docker container and deploy the app to Heroku with continuous integration
-- [-] Integrate article summary extraction (NLP) with [Newspaper3k](https://newspaper.readthedocs.io/) 
+- [x] Integrate article summary extraction (NLP) with [Newspaper3k](https://newspaper.readthedocs.io/) 
 - [ ] Technical screening (candlestick pattern recognition -> return bearish/bullish indicator)
 - [ ] Alerts and notification pushing
+- [ ] Cached querying and profile summary
 
 </br>
 
@@ -32,13 +35,6 @@ A python web-application built to evaluate portfolio holdings and screen stock a
 
 </br>
 
-## Analytics Objectives
-- [ ] Refine dashboard UI for interactively querying
-- [x] Run a background process outside the request/response flow
-- [ ] Technical screening (candlestick pattern recognition -> return bearish/bullish indicator)
-
-
-</br>
 
 ## Installation & Usage
 
