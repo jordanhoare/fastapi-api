@@ -1,3 +1,5 @@
+# import asyncio
+
 import nltk
 from newspaper import Article
 
@@ -17,5 +19,5 @@ async def generate_summary(summary_id: int, url: str) -> None:
         article.nlp()
 
     summary = article.summary
-
+    # await asyncio.sleep(10)
     await TextSummary.filter(id=summary_id).update(summary=summary)

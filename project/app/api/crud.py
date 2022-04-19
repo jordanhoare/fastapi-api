@@ -31,6 +31,7 @@ async def put(id: int, payload: SummaryPayloadSchema) -> Union[dict, None]:
         return updated_summary
     return None
 
+
 async def post(payload: SummaryPayloadSchema) -> int:
     """A utility function to create new summaries
     - takes a payload object
