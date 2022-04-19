@@ -5,10 +5,17 @@ Live Demo:  http://fast-sea-13591.herokuapp.com/.
 
 </br>
 
-An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres run inside Docker containers and pytests are configured in order to practice Test-Driven Development (TDD).  The app is deployable to Heroku (a free cloud PaaS) using a Gunicorn WSGI server.
+A python web-application built to evaluate portfolio holdings and screen stock announcements and charts for bearish/bullish patterns.  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
 
 </br>
 
+## Features
+- [x] Containerize FastAPI and Postgres inside a Docker container and deploy the app to Heroku with continuous integration
+- [-] Integrate article summary extraction (NLP) with [Newspaper3k](https://newspaper.readthedocs.io/) 
+- [ ] Technical screening (candlestick pattern recognition -> return bearish/bullish indicator)
+- [ ] Alerts and notification pushing
+
+</br>
 
 ## Dev Objectives
 - [x] Develop an asynchronous RESTful API with Python and FastAPI
@@ -17,19 +24,18 @@ An async RESTful API with Python, FastAPI, and Postgres. FastAPI and Postgres ru
 - [x] Interact with a Postgres database asynchronously
 - [x] Containerize FastAPI and Postgres inside a Docker container
 - [x] Deploy dockerized app to Heroku
-- [ ] Run unit and integration tests with code coverage
+- [x] Run unit and integration tests with code coverage
 - [x] Improve code quality with linter
 - [x] Configure GitHub Actions for continuous integration and deployment
 - [ ] Run tests in parallel
+- [x] Configure index.html from [Atlantis-Lite UI template](https://github.com/themekita/Atlantis-Lite)
 
 </br>
 
 ## Analytics Objectives
-- [x] Configure index.html from [Atlantis-Lite UI template](https://github.com/themekita/Atlantis-Lite)
 - [ ] Refine dashboard UI for interactively querying
-- [ ] Run a background process outside the request/response flow
+- [x] Run a background process outside the request/response flow
 - [ ] Technical screening (candlestick pattern recognition -> return bearish/bullish indicator)
-- [ ] Alerts and notification pushing
 
 
 </br>
