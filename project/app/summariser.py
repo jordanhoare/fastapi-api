@@ -7,6 +7,7 @@ from app.models.tortoise import TextSummary
 
 
 async def generate_summary(summary_id: int, url: str) -> None:
+    """ """
     article = Article(url)
     article.download()
     article.parse()
@@ -19,5 +20,7 @@ async def generate_summary(summary_id: int, url: str) -> None:
         article.nlp()
 
     summary = article.summary
-    # await asyncio.sleep(10)
+
+    # NLP here
+
     await TextSummary.filter(id=summary_id).update(summary=summary)
