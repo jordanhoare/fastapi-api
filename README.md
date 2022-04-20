@@ -5,7 +5,7 @@ Live Demo:  http://fast-sea-13591.herokuapp.com/.
 
 </br>
 
-A python web-application built to evaluate portfolio holdings by screening company announcements and stock charts for bearish/bullish patterns.  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
+A python web-application built to evaluate portfolio holdings by screening company announcements (scraping & BERT sentiment analysis) and stock charts for bearish/bullish patterns (quant analysis).  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
 
 </br>
 
@@ -14,6 +14,7 @@ A python web-application built to evaluate portfolio holdings by screening compa
 ## Features
 - [x] Containerize FastAPI and Postgres inside a Docker container and deploy the app to Heroku with continuous integration
 - [x] Integrate article summary extraction (NLP) with [Newspaper3k](https://newspaper.readthedocs.io/) 
+- [x] Run sentiment analysis on article summary with the [BERT Model](https://huggingface.co/docs/transformers/model_doc/bert) 
 - [ ] Technical screening (candlestick pattern recognition -> return bearish/bullish indicator)
 - [ ] Alerts and notification pushing
 - [ ] Cached querying and profile summary

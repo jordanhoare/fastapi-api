@@ -4,6 +4,7 @@ from datetime import datetime
 import pytest
 
 from app.api import crud, summaries
+from app.sentiment import BertClassifier
 
 
 def test_create_summary(test_app, monkeypatch):
@@ -52,6 +53,10 @@ def test_read_summary(test_app, monkeypatch):
         "id": 1,
         "url": "https://foo.bar",
         "summary": "summary",
+        "sentiment": "sentiment",
+        "positive_score": 0.9,
+        "neutral_score": 0.22,
+        "negative_score": 0.2,
         "created_at": datetime.utcnow().isoformat(),
     }
 
@@ -82,12 +87,20 @@ def test_read_all_summaries(test_app, monkeypatch):
             "id": 1,
             "url": "https://foo.bar",
             "summary": "summary",
+            "sentiment": "sentiment",
+            "positive_score": 0.9,
+            "neutral_score": 0.22,
+            "negative_score": 0.2,
             "created_at": datetime.utcnow().isoformat(),
         },
         {
             "id": 2,
             "url": "https://testdrivenn.io",
             "summary": "summary",
+            "sentiment": "sentiment",
+            "positive_score": 0.9,
+            "neutral_score": 0.22,
+            "negative_score": 0.2,
             "created_at": datetime.utcnow().isoformat(),
         },
     ]
@@ -108,6 +121,10 @@ def test_remove_summary(test_app, monkeypatch):
             "id": 1,
             "url": "https://foo.bar",
             "summary": "summary",
+            "sentiment": "sentiment",
+            "positive_score": 0.9,
+            "neutral_score": 0.22,
+            "negative_score": 0.2,
             "created_at": datetime.utcnow().isoformat(),
         }
 
@@ -140,6 +157,10 @@ def test_update_summary(test_app, monkeypatch):
         "id": 1,
         "url": "https://foo.bar",
         "summary": "summary",
+        "sentiment": "sentiment",
+        "positive_score": 0.9,
+        "neutral_score": 0.22,
+        "negative_score": 0.2,
         "created_at": datetime.utcnow().isoformat(),
     }
 
