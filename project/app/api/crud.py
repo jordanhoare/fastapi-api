@@ -2,7 +2,6 @@ from typing import List, Union
 
 from app.models.pydantic import SummaryPayloadSchema
 from app.models.tortoise import TextSummary
-from app.sentiment import BertClassifier
 
 
 async def get(id: int) -> Union[dict, None]:
@@ -33,17 +32,12 @@ async def put(id: int, payload: SummaryPayloadSchema) -> Union[dict, None]:
 
 
 async def post(payload: SummaryPayloadSchema) -> int:
-    """Create new summaries:
+    """
+    A utility function to create new summaries
     - takes a payload object
     - creates a new TextSummary instance
-    - creates sentiment scores
     - returns the generated ID
     """
     summary = TextSummary(url=payload.url, summary="")
-    sentiment, positive_score, neutral_score, negative_score = BertClassifier(
-        summary
-    ).return_list()
-
     await summary.save()
-
     return summary.id

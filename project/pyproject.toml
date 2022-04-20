@@ -5,7 +5,7 @@ description = ""
 authors = ["jordanhoare <jordanhoare0@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8.2"
+python = ">=3.8.2,<3.11"
 fastapi = "^0.70.1"
 uvicorn = "^0.16.0"
 python-dotenv = "^0.19.2"
@@ -29,6 +29,9 @@ coverage = "^6.3.2"
 newspaper3k = "^0.2.8"
 nltk = "^3.7"
 streamlit = "^1.8.1"
+scipy = "^1.8.0"
+transformers = "^4.18.0"
+torch = "^1.11.0"
 
 [tool.poetry.dev-dependencies]
 jupyter = "^1.0.0"

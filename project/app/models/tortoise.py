@@ -43,10 +43,10 @@ class TextSummary(models.Model):
     url = fields.TextField()
     summary = fields.TextField()
     created_at = fields.DatetimeField(auto_now_add=True)
-    sentiment = fields.TextField()
-    positive_score = fields.FloatField()
-    neutral_score = fields.FloatField()
-    negative_score = fields.FloatField()
+    sentiment = fields.TextField(null=True)
+    positive_score = fields.DecimalField(max_digits=5, decimal_places=2, null=True)
+    neutral_score = fields.DecimalField(max_digits=5, decimal_places=2, null=True)
+    negative_score = fields.DecimalField(max_digits=5, decimal_places=2, null=True)
 
     def __str__(self):
         return self.url
