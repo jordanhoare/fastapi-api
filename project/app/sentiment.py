@@ -1,4 +1,3 @@
-import numpy as np
 from scipy.special import softmax
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 

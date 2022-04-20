@@ -1,15 +1,18 @@
-
 ![Continuous Integration and Delivery](https://github.com/jordanhoare/fastapi-api/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
+
+</br>
 
 Live Demo:  http://fast-sea-13591.herokuapp.com/.
 
 </br>
 
-A python web-application built to evaluate portfolio holdings by screening company announcements (scraping & BERT sentiment analysis) and stock charts for bearish/bullish patterns (quant analysis).  The async RESTful API is built with FastAPI, and Postgres - deployed to Heroku using a Gunicorn WSGI server with CI/CD, pytests & code coverage. 
+[WIP] A python web-application that evaluates portfolio holdings by screening company announcements (scraping -> BERT sentiment analysis) and implementing quant-analysis on stock charts for bearish/bullish pattern recognition.  The async RESTful API is built with FastAPI, and Postgres then deployed to Heroku using a Gunicorn WSGI server with integrated pytests & code coverage.
 
 </br>
 
 ![Alt text](project/static/img/screenshot.png)
+
+</br>
 
 ## Features
 - [x] Containerize FastAPI and Postgres inside a Docker container and deploy the app to Heroku with continuous integration
@@ -328,23 +331,3 @@ A python web-application built to evaluate portfolio holdings by screening compa
 </details>
 
 </br>
-
-</br>
-
-</br>
-
-</br>
-
-<p align="center">
-    <a href="https://www.linkedin.com/in/jordan-hoare/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-    </a>&nbsp;&nbsp;
-    <a href="https://www.kaggle.com/jordanhoare">
-        <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" />
-    </a>&nbsp;&nbsp;
-    <a href="mailto:jordanhoare0@gmail.com">
-        <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-    </a>&nbsp;&nbsp;
-</p>
-
-
